@@ -1,9 +1,8 @@
 import React from 'react';
 import Card from './Card';
-import { robots } from '../utils/robots.js';
 import '../styles/index.css';
 
-function CardList() {
+function CardList({ robots }) {
 	return (
 		<div className="comps">
 			{
