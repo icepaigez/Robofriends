@@ -24,14 +24,18 @@ class App extends Component {
 
 	render() {
 		const { robots, searchfield } = this.state;
-		const filteredRobots = robots.filter(robot => robot.username.toLowerCase().includes(searchfield.toLowerCase()));
-		return(
-			<div className="parent-app">
-				<h1>RoboFriends</h1>
-				<SearchBox searchChange={this.onSearchChange}/>
-				<CardList robots={filteredRobots}/>
-			</div>
-		)
+		if (robots.length === 0) {
+			return <h1>INCOMING ...</h1>
+		} else {
+			const filteredRobots = robots.filter(robot => robot.username.toLowerCase().includes(searchfield.toLowerCase()));
+			return(
+				<div className="parent-app">
+					<h1>RoboFriends</h1>
+					<SearchBox searchChange={this.onSearchChange}/>
+					<CardList robots={filteredRobots}/>
+				</div>
+			)
+		}
 	}
 };
 
