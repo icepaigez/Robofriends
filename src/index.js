@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import CardList from './components/CardList';
-import './styles/index.css';
+import App from './components/App';
 
 
-ReactDOM.render(<CardList />, document.getElementById('root'));
+
+ReactDOM.render(<App />, document.getElementById('root'));
