@@ -3,6 +3,9 @@ import Card from './Card';
 import '../styles/index.css';
 
 function CardList({ robots }) {
+	if (true) {
+		throw new Error(' something wrong')
+	}
 	return (
 		<div className="comps">
 			{
