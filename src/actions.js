@@ -1,7 +1,6 @@
-"use strict";
-import { CHANGE_FIELD } from './constants.js'
+import { CHANGE_SEARCH_FIELD } from './constants.js';
 
 export const setSearchField = (text) => ({
-	type: CHANGE_FIELD,
+	type: CHANGE_SEARCH_FIELD,
 	payload: text
 });
